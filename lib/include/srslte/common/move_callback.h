@@ -24,6 +24,7 @@
 
 #include <cstddef>
 #include <functional>
+#include <cstdio>
 #include <type_traits>
 
 #if defined(__cpp_exceptions) && (1 == __cpp_exceptions)
