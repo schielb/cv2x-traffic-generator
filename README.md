@@ -29,6 +29,12 @@ make
 sudo make install
 ```
 
+### Update Libraries
+You may need to update the libraries that your system can access. This is accomplished simply using:
+```
+sudo ldconfig
+```
+
 
 # Usage
 
@@ -39,6 +45,24 @@ The traffic generator can be used with static settings
 or with a configuration file (an example config file is included in this repository)
 ```
    cv2x_traffic_generator -a clock=gpsdo -i sf_config.csv -o logfile.csv
+```
+
+## Help
+The help menu is as follows:
+```
+Usage: cv2x_traffic_generator [acdgilmnoprs] -f tx_frequency_hz -v verbose
+	-a RF args [Default ]
+	-c N_sl_id [Default 19]
+	-d RF devicename [Default ]
+	-g RF Gain [Default 80.00 dB]
+	-i input_file_name for csv file containing sub_channel_start_idx and l_sub_channel.
+	-l l_sub_channel [Default 2]. If input_file_name is specified this will be ignored.
+	-m mcs_idx [Default 20]
+	-n num_sub_channel [Default for 50 prbs 10]
+	-o log_file_name.
+	-p nof_prb [Default 50]
+	-r use_standard_lte_rates [Default 0]
+	-s sub_channel_start_idx [Default 0]. If input_file_name is specified this will be ignored.
 ```
 
 # Cite as
